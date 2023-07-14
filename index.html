@@ -3,14 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
     <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="./images/favicon-32x32.png"
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css"
     />
 
-    <title>Frontend Mentor | Todo app</title>
+    <title>Todo app with Pomodoro</title>
     <link rel="stylesheet" href="Css/styles.css" />
   </head>
   <body>
@@ -44,15 +43,102 @@
     <h1>TODO</h1>
     <!-- end of mobile -->
 
-    <div class="form-container">
-      <form>
+    <section class="form-container">
+      <form class="todo-form">
         <p class="alert"></p>
         <div class="form-control">
-          <input type="text" id="form_tasks" class="form_input" />
+          <input
+            type="text"
+            id="form_tasks"
+            class="form_input"
+            placeholder="create a new todo"
+          />
           <button type="submit" class="submit">Submit</button>
         </div>
       </form>
+    </section>
+
+    <section class="todo-container">
+      <div class="todo-list">
+        <!-- <div class="todo-item">
+          <div class="round">
+            <input type="checkbox" checked id="checkbox" />
+            <label for="checkbox"></label>
+            <input type="text" name="text" class="input-text" />
+          </div>
+
+          <div class="btn-container">
+            
+            <button type="button" class="edit-btn">
+              <i class="fas fa-edit"></i>
+            </button>
+          
+            <button type="button" class="delete-btn">
+              <i class="fas fa-trash"></i>
+            </button>
+          </div>
+        </div> -->
+      </div>
+
+      <div class="btn hidden">
+        <div class="no-of-tasks"><span></span> item left</div>
+
+        <div>
+          <button class="clear-completed items">Clear Completed</button>
+        </div>
+      </div>
+    </section>
+
+    <div class="filter-btn">
+      <button class="all">All</button>
+      <button class="active">Active</button>
+      <button class="completed">Completed</button>
     </div>
+
+    <!-- pomodoro Timer
+    <div class="app">
+      <progress id="js-progress" value="0"></progress>
+      <div class="progress-bar"></div>
+      <div><input type="text" placeholder="short description" /></div>
+      <div class="timer">
+        <div class="button-group mode-buttons" id="js-mode-buttons">
+          <button
+            data-mode="pomodoro"
+            class="button active mode-button"
+            id="js-pomodoro"
+          >
+            Pomodoro
+          </button>
+          <button
+            data-mode="shortBreak"
+            class="button mode-button"
+            id="js-short-break"
+          >
+            Short break
+          </button>
+          <button
+            data-mode="longBreak"
+            class="button mode-button"
+            id="js-long-break"
+          >
+            Long break
+          </button>
+        </div>
+        <div class="clock" id="js-clock">
+          <span id="js-minutes">25</span>
+          <span class="separator">:</span>
+          <span id="js-seconds">00</span>
+        </div>
+        <button class="main-button" data-action="start" id="js-btn">
+          Start
+        </button>
+      </div>
+    </div>
+    <div class="hidden">
+      <audio src="backtowork.mp3" data-sound="pomodoro"></audio>
+      <audio src="break.mp3" data-sound="shortBreak"></audio>
+      <audio src="break.mp3" data-sound="longBreak"></audio>
+    </div> -->
 
     <!-- js link -->
     <script src="Js/script.js"></script>
